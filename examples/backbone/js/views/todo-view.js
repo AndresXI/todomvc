@@ -10,7 +10,7 @@ var app = app || {};
 	// The DOM element for a todo item...
 	app.TodoView = Backbone.View.extend({
 		//... is a list tag.
-		tagName:  'li',
+		tagName: 'li',
 
 		// Cache the template function for a single item.
 		template: _.template($('#item-template').html()),
@@ -119,7 +119,7 @@ var app = app || {};
 
 		// Remove the item, destroy the model from *localStorage* and delete its view.
 		clear: function () {
-			this.model.destroy();
+			this.model.remove();
 		}
 	});
 })(jQuery);
